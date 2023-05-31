@@ -1,0 +1,115 @@
+{% extends "ImgProcess/layout.html" %} {% block body %}
+
+<style>
+    /*::-webkit-scrollbar{
+        display: none;
+    }*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8px;
+    -ms-overflow-style: none;
+}
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .form-group {
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #919191;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .input-group {
+    margin: 0px 8px 0px 16px;
+    transition: 0.3s;
+}
+
+.sidenav .input-group:hover {
+    color: #f1f1f1;
+}
+
+/*.sidenav .form-group:hover {
+    color: #f1f1f1;
+}*/
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+</style>
+<script>
+    function noscroll(){
+        window.scrollTo(0,0);
+    }
+    window.addEventListener("scroll",noscroll);
+</script>
+    <br>
+    <div>
+   <div>
+    <div style="margin-left:100px">
+        <img src="{{ url_for('static', filename='img/temp_red_hist.jpeg') }}" alt="image here" width="500" height="350">
+    </div>    
+    <div style="margin-left:800px; margin-top: -350px ;">
+        <img src="{{ url_for('static', filename='img/temp_green_hist.jpeg') }}" alt="image here" width="500" height="350">
+    <div>
+    <div style="margin-left:-370px">
+        <img src="{{ url_for('static', filename='img/temp_blue_hist.jpeg') }}" alt="image here" width="500" height="350">
+    </div>
+    </div>
+</div>
+
+
+
+ <div id="mySidenav" class="sidenav bg-dark" style="margin-top: 56px; width:350px;">
+
+        <br>
+        <br>
+        <div style="margin-left:15px">
+        <p style="color: white;">Red Histogram</p>
+        <br>
+        <p style="color: white;">Green Histogram</p>
+        <br>
+        <p style="color: white;">Blue Histogram</p>
+        
+        <br>
+        <br>
+        <br>
+        
+        <form id="" action="{{ url_for('normal') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-success">Home Page</button>
+    </div>
+    </form>
+</div>
+    </div>
+   
+
+
+ 
+                </div>
+{% endblock %}

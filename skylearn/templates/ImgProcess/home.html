@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block body %}
+<div>
+    <img src="{{ url_for('static', filename=file_path) }}" alt="image here">
+    <form id="" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        Select a file:
+        <input name="file" type="file" id="inputGroupFile04" accept="image/*">
+        <button type="submit" class="btn btn-success">Preview</button>
+    </form>
+    <!-- <p>*please clear your browser cache for better result</p> -->
+</div>
+
+<!-- <script>
+    browser.cookies.all()
+</script> -->
+{% endblock %}

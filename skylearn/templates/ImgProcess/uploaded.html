@@ -1,0 +1,129 @@
+{% extends "ImgProcess/layout.html" %} {% block body %}
+
+<style>
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8px;
+    -ms-overflow-style: none;
+}
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .form-group {
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #919191;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .input-group {
+    margin: 0px 8px 0px 16px;
+    transition: 0.3s;
+}
+
+.sidenav .input-group:hover {
+    color: #f1f1f1;
+}
+
+/*.sidenav .form-group:hover {
+    color: #f1f1f1;
+}*/
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+</style>
+    <br>
+
+    <div>
+    <div style="margin-left: 280px; margin-top: 120px">
+        <h3>Before</h3>
+        <img src="{{ url_for('static', filename='img/temp_img.jpeg') }}" alt="image here"  width="400" height="250">
+    </div>
+    <br>
+    <div style="margin-left: 840px; margin-top: -310px;">
+        <h3>After</h3>
+        <img src="{{ url_for('static', filename=file_path) }}" alt="image here" width="400" height="250">
+    </div>
+</div>
+
+ <div id="mySidenav" class="sidenav bg-dark" style="margin-top: 56px; width:350px;">
+  <br>
+         <div>
+
+    <form id="" action="{{ url_for('grayscale') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Grayscale</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('inverse') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Inverse</button>
+    </form>
+<br>
+
+    <form id="" action="{{ url_for('fliphorizontal') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Horizontal Flip</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('flipvertical') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Vertical Flip</button>
+    </form> 
+<br>
+    <form id="" action="{{ url_for('brightness') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Brightness</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('darkening') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Darkening</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('histogram') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Histogram</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('blurring') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Blurring</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('sharpening') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Sharpening</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('edge_detection') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Edge Detection</button>
+    </form>
+<br>
+    <form id="" action="{{ url_for('convolution') }}" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-dark">Convolution</button>
+    </form>
+
+</div>
+ 
+                </div>
+{% endblock %}

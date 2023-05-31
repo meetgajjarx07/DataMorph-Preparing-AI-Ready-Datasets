@@ -1,0 +1,118 @@
+{% extends "ImgProcess/layout.html" %} {% block body %}
+
+<style>
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8px;
+    -ms-overflow-style: none;
+}
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .form-group {
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #919191;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .input-group {
+    margin: 0px 8px 0px 16px;
+    transition: 0.3s;
+}
+
+.sidenav .input-group:hover {
+    color: #f1f1f1;
+}
+
+/*.sidenav .form-group:hover {
+    color: #f1f1f1;
+}*/
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+</style>
+    <br>
+    <div>
+    <div style="margin-left: 280px; margin-top: 120px">
+        <h3>Before</h3>
+        <img src="{{ url_for('static', filename='img/temp_img.jpeg') }}" alt="image here"  width="400" height="250">
+    </div>
+    <br>
+    <div style="margin-left: 840px; margin-top: -310px;">
+        <h3>After</h3>
+        <img src="{{ url_for('static', filename=file_path) }}" alt="image here" width="400" height="250">
+    </div>
+</div>
+
+
+
+ <div id="mySidenav" class="sidenav bg-dark" style="margin-top: 56px; width:350px;">
+    <br>
+    <div style="margin-left: 15px;">
+    <p style="color: white;">*Running convolution can be took a long time depend on your image pixel size.</p>
+</div>
+    <br>
+    <div style="margin-left: 15px;">
+    <p style="color: white;">Convolution Matrix</p>
+</div>
+    <br>
+    <form form id="" action="{{ url_for('convoluting') }}" method="POST" enctype="multipart/form-data">
+        <div style="margin-left:15px">
+        <div>
+            <input placeholder="0" size="3" type="text" name="mat11">
+            <input placeholder="0" size="3" type="text" name="mat12">
+            <input placeholder="0" size="3" type="text" name="mat13">
+        </div>
+        <div>
+            <input placeholder="0" size="3" type="text" name="mat21">
+            <input placeholder="0" size="3" type="text" name="mat22">
+            <input placeholder="0" size="3" type="text" name="mat23">
+        </div>
+        <div>
+            <input placeholder="0" size="3" type="text" name="mat31">
+            <input placeholder="0" size="3" type="text" name="mat32">
+            <input placeholder="0" size="3" type="text" name="mat33">
+         </div>   
+         <br>
+            <button type="submit" class="btn btn-success">Preview</button>
+        </div>
+        <br>
+        <br>
+        <br>
+       <div style="margin-left:170px; margin-top: -110px;">
+        <form id="" action="{{ url_for('normal') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-success">Home Page</button>
+    </form>
+</div>
+
+   
+{% endblock %}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  
+<!-- Mirrored from mixdesign.club/themeforest/ramio/index-monochrome-particles.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Mar 2023 10:51:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+
+    <!-- Page Title-->
+    <title>DataMorph</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Meta Tags-->
+    <meta name="description" content="DataMorph">
+    <meta name="keywords" content="ramio, coming soon, under construction, template, coming soon page, html5, css3">
+    <meta name="author" content="mix_design">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="{{ url_for('static', filename= 'landing/img/favicon/monochrome/favicon.ico')}}" sizes="any">
+    <link rel="icon" href="{{ url_for('static', filename= 'landing/img/favicon/monochrome/icon2.png')}}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename= 'landing/img/favicon/monochrome/apple-touch-icon.png')}}">
+    <link rel="manifest" href="{{ url_for('static', filename= 'landing/img/favicon/monochrome/manifest.webmanifest')}}">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="Ramio - Clean Coming Soon and Landing Page Template">
+    <meta property="og:description" content="Ramio - incredible coming soon template to kick-start your project">
+    <meta property="og:url" content="index.html">
+    <meta property="og:image" content="img/favicon/og-image.html">
+    <!-- Facebook Metadata End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'landing/css/loaders/loader-monochrome.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'landing/css/plugins.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'landing/css/main.css')}}">
+    <!-- Template Styles End -->
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" content="#24262b">
+    <meta name="msapplication-navbutton-color" content="#24262b">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#24262b">
+    <!-- Custom Browser Color End -->
+
+  </head>
+
+  <body>
+
+    <!-- Loader Start -->
+    <div class="loader">
+      <div class="loader-content">
+        <div class="loader-logo slideInDown">
+          <!-- Your Logo Here -->
+          <img src="{{ url_for('static', filename= 'landing/img/ramio-loader-logo.png')}}" alt="Ramio">
+        </div>
+        <div class="loader-caption slideInUp">
+          <span class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Custom HTML Start -->
+
+    <!-- Main Screen Section Start-->
+    <section id="main" class="main">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 fullheight">
+
+          <!-- Main Section Intro Start -->
+          <div class="col-12 col-xl-6 main__intro">
+            <div class="intro__content">
+
+              <!-- Logo Start -->
+              <div class="intro__logo">
+                <img src="{{ url_for('static', filename= 'landing/img/ramio-logo.png')}}" alt="Ramio - clean coming soon & landing page template">
+              </div>
+              <!-- Logo End -->
+
+              <!-- Main Menu Start -->
+              <div class="intro__menu">
+                <nav>
+                 <!--  <ul>
+                    <li><a href="#" id="about-trigger">About us</a></li>
+                    <li><a href="#" id="works-trigger">Our works</a></li>
+                    <li><a href="#" id="contact-trigger">Contact</a></li>
+                  </ul> -->
+                </nav>
+              </div>
+              <!-- Main Menu End -->
+
+              <!-- Socials Start -->
+              <div class="intro__socials">
+               <!--  <ul>
+                  <li>
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/" target="_blank">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://dribbble.com/" target="_blank">
+                      <i class="fa-brands fa-dribbble"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                </ul> -->
+              </div>
+              <!-- Socials End -->
+
+              <!-- Main Headline Start -->
+              <div class="intro__headline">
+
+                <!-- Headline Content Start -->
+                <h1>
+                  All data
+                  <br>
+                  has a story!
+                </h1>
+                <p class="headline-text">
+                  The best way to predict the future is to study the past, or prognosticate.
+                </p>
+                <form action="/" method="post" enctype="multipart/form-data" id="form_up">
+                  <label for="file_up" class="button button-l button-dark-outline">
+                    <span class="button-caption">Upload</span>
+                  </label>
+                  <input type="file" name="file_up" id="file_up" required style="display:none;" onchange="$('#form_up').submit();">
+                  <input type="hidden" name="hid" value="hid_page">
+                </form>
+                <!-- Headline Content End -->
+<script>
+    function sub_eve()
+    {
+        $('#form_up').submit();
+    }
+</script>
+              </div>
+              <!-- Main Headline End -->
+
+            </div>
+          </div>
+          <!-- Main Section Intro End -->
+
+          <!-- Main Section Media Start -->
+          <div class="col-12 col-xl-6 main__media">
+
+            <!-- Main Section Image & Background Effect Start -->
+            <div class="media__image media-5">
+
+              <!-- Color Layer Start -->
+              <!-- <div class="color-layer color-layer-medium"></div> -->
+              <!-- Color Layer End -->
+
+              <!-- Background Effect Start -->
+              <div id="particles-js"></div>
+              <!-- Background Effect End -->
+
+           
+
+            </div>
+            <!-- Main Section Image & Background Effect End -->
+
+          </div>
+          <!-- Main Section Media End -->
+
+        </div>
+      </div>
+    </section>
+    <!-- Main Screen Section End -->
+
+
+
+    <!-- Contact Form Section Start -->
+
+      <!-- Close Button End -->
+
+    <!-- Contact Form Section End -->
+
+
+    <!-- Custom HTML End -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+      <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+      <div class="pswp__bg"></div>
+
+      <!-- Slides wrapper with overflow:hidden. -->
+      <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+          <div class="pswp__top-bar">
+
+            <!--  Controls are self-explanatory. Order can be changed. -->
+
+            <div class="pswp__counter"></div>
+
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+            <!-- element will get class pswp__preloader-active when preloader is running -->
+            <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Load Scripts Start -->
+    <script src="{{ url_for('static', filename= 'landing/js/libs.min.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'landing/js/gallery-init.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'landing/js/ramio-custom.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'landing/js/maps/map-monochrome.js')}}"></script>
+    <!-- Load Scripts End -->
+
+  </body>
+
+
+<!-- Mirrored from mixdesign.club/themeforest/ramio/index-monochrome-particles.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Mar 2023 10:51:53 GMT -->
+</html>

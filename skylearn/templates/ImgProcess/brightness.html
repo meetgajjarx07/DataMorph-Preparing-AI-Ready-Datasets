@@ -1,0 +1,123 @@
+{% extends "ImgProcess/layout.html" %} {% block body %}
+
+<style>
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 8px;
+    -ms-overflow-style: none;
+}
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .form-group {
+    padding: 2px 16px 2px 16px;
+    text-decoration: none;
+    color: #919191;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .input-group {
+    margin: 0px 8px 0px 16px;
+    transition: 0.3s;
+}
+
+.sidenav .input-group:hover {
+    color: #f1f1f1;
+}
+
+/*.sidenav .form-group:hover {
+    color: #f1f1f1;
+}*/
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+</style>
+    <br>
+    <div>
+    <div style="margin-left: 280px; margin-top: 120px">
+        <h3>Before</h3>
+        <img src="{{ url_for('static', filename='img/temp_img.jpeg') }}" alt="image here"  width="400" height="250">
+    </div>
+    <br>
+    <div style="margin-left: 840px; margin-top: -310px;">
+        <h3>After</h3>
+        <img src="{{ url_for('static', filename=file_path) }}" alt="image here" width="400" height="250">
+    </div>
+</div>
+
+
+
+ <div id="mySidenav" class="sidenav bg-dark" style="margin-top: 56px; width:350px;">
+     <form id="" action="{{ url_for('brightnesswithincrease') }}" method="POST" enctype="multipart/form-data">
+        <div style="margin-left:15px">
+            <br>
+            <p style="color: white;">Brightness with Increase (+)</p>
+        </div>
+            <div class="form-group" style="width:300px;">
+                    <label for="number"></label>
+                    <input type="number" class="form-control"
+                        id="number" name="val_increase">
+                </div>
+        <div style="margin-left:15px">
+            <button type="submit" class="btn btn-success">Preview</button>
+        </form>
+    </div>
+    <br>
+    <br>
+        <form id="" action="{{ url_for('brightnesswithmultiply') }}" method="POST" enctype="multipart/form-data">
+            <div style="margin-left:15px">
+            <p style="color: white;">Brightness with Multiply (*)</p>
+           </div>     
+            <div class="form-group" style="width:300px;">
+                    <label for="number"></label>
+                    <input type="number" class="form-control"
+                        id="number" name="val_multiply">
+                </div>
+            <!-- <input placeholder="example: 2" type="number" name="val_multiply"> -->
+            <div style="margin-left:15px">
+            <button type="submit" class="btn btn-success">Preview</button>
+        </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <div style="margin-left:170px; margin-top: -110px;">
+        <form id="" action="{{ url_for('normal') }}" method="POST" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-success">Home Page</button>
+    </form>
+</div>
+    </div>
+   
+
+
+ 
+                </div>
+{% endblock %}
