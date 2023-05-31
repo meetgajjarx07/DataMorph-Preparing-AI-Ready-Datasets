@@ -1,7 +1,4 @@
-# ibm-project-submission-2019-batch-meetgajjar18
 
-
-<br />
 <div align="center">
 <h1 align="center">DataMorph - GUI Based Machine Learning app</h3>
 
